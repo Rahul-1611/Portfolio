@@ -1,7 +1,5 @@
 import React from 'react';
 import Section from '../layout/Section';
-import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -23,27 +21,6 @@ const Contact = () => {
                 >
                     Say Hello
                 </a>
-
-                <div className="w-full flex justify-center gap-12 pt-8 border-t border-white/10">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 text-slate hover:text-cyan transition-colors group">
-                        <div className="p-4 bg-navy-light rounded-full group-hover:bg-cyan/10 transition-colors">
-                            <Github size={28} />
-                        </div>
-                        <span className="font-mono text-sm">GitHub</span>
-                    </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-3 text-slate hover:text-azure transition-colors group">
-                        <div className="p-4 bg-navy-light rounded-full group-hover:bg-azure/10 transition-colors">
-                            <Linkedin size={28} />
-                        </div>
-                        <span className="font-mono text-sm">LinkedIn</span>
-                    </a>
-                    <a href="mailto:your.email@example.com" className="flex flex-col items-center gap-3 text-slate hover:text-cyan transition-colors group">
-                        <div className="p-4 bg-navy-light rounded-full group-hover:bg-cyan/10 transition-colors">
-                            <Mail size={28} />
-                        </div>
-                        <span className="font-mono text-sm">Email</span>
-                    </a>
-                </div>
             </div>
         </Section>
     );
