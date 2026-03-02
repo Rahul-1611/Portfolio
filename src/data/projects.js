@@ -3,10 +3,10 @@ export const projects = [
         id: 1,
         title: "DockerOpsAgent",
         description: "Conversational, LangGraph-powered assistant for Docker Hub tasks. It plans, checks risky actions, executes MCP tools, and summarizes outcomes — all from a simple CLI.",
-        details: "The EcoScale Serverless Backend is a complete cloud-native solution designed for processing high-throughput IoT telemetry. By utilizing Azure Functions and Cosmos DB, the architecture ensures seamless horizontal scaling under load. It employs Event Grid for event-driven patterns, substantially reducing overall latency. Infrastructure is fully codified using Bicep/ARM templates, and sensitive settings are secured behind Azure Key Vault with Managed Identities. Future versions will incorporate more complex anomaly detection algorithms directly into the event stream.",
+        details: "DockerOpsAgent is a conversational assistant that uses LangGraph to handle Docker Hub tasks without requiring custom CLI scripts or manual UI navigation. When the user types a natural-language command into the terminal, the agent turns it into an ordered sequence of Docker operations, executes those operations through MCP tools running inside a Docker container, and returns a concise, human-readable result. Planning is handled by Gemini, and each node is orchestrated by LangGraph, producing a predictable and well-structured workflow for tasks like listing repositories, inspecting images, and checking usage metadata.",
         images: [
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"
+            "/projects/DockerOpsAgent/DockerOpsAgent.png",
+            "/projects/DockerOpsAgent/DockerOpsFlow.png"
         ],
         architecture: ["Langgraph", "Docker Hub MCP", "Gemini API", "Typscript MCP SDK"],
         highlights: [
@@ -15,8 +15,8 @@ export const projects = [
             "Lightweight CLI with checkpointed threads so you can pause/resume.",
             "Structured logging for debugging (set LOG_LEVEL)"
         ],
-        github: "https://github.com/yourusername/ecoscale",
-        live: "https://ecoscale-demo.azurewebsites.net"
+        github: "https://github.com/Rahul-1611/DockerOpsAgent",
+        live: "https://gmuedu-my.sharepoint.com/:v:/g/personal/rdeshmu_gmu_edu/IQDakrq8lYZhQYTcVQVJW5eyAQ3nGrbaKq5II4IupgZPyuI?e=QZgyud&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
     },
     {
         id: 2,
