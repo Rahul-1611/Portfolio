@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Section from '../layout/Section';
 import Card from '../ui/Card';
 import Badge from '../ui/Badge';
@@ -8,6 +8,22 @@ import { Github, Info } from 'lucide-react';
 
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+    const [showAll, setShowAll] = useState(false);
+
+    useEffect(() => {
+        // Automatically show all projects on mobile (below md breakpoint)
+        const checkMobile = () => {
+            if (window.innerWidth < 768) {
+                setShowAll(true);
+            }
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
     return (
         <Section id="projects" title="Notable Work">
@@ -18,7 +34,7 @@ const Projects = () => {
             </p>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-                {projects.map((project, index) => (
+                {visibleProjects.map((project, index) => (
                     <Card key={project.id} index={index} className="flex flex-col h-full group p-0 overflow-hidden">
                         {/* Image Top */}
                         <div className="w-full h-48 relative overflow-hidden bg-black/50">
@@ -72,6 +88,17 @@ const Projects = () => {
                     </Card>
                 ))}
             </div>
+
+            {!showAll && projects.length > 3 && (
+                <div className="mt-12 flex justify-center sticky bottom-8 md:relative md:bottom-auto z-20">
+                    <button
+                        onClick={() => setShowAll(true)}
+                        className="px-10 py-4 bg-navy/80 backdrop-blur-sm border border-cyan text-cyan font-bold rounded-lg hover:bg-cyan/10 transition-all duration-300 shadow-[0_0_20px_rgba(100,255,218,0.1)] hover:shadow-[0_0_30px_rgba(100,255,218,0.2)] transform hover:-translate-y-1"
+                    >
+                        View All Projects
+                    </button>
+                </div>
+            )}
 
             <ProjectModal
                 project={selectedProject}

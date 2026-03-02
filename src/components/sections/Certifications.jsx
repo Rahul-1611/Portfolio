@@ -13,11 +13,11 @@ const iconMap = {
 };
 
 const Certifications = () => {
-    const defaultVisibleCount = 3;
+    const defaultVisibleCount = 2;
     const [visibleCount, setVisibleCount] = useState(defaultVisibleCount);
 
     const loadMore = () => {
-        setVisibleCount((prev) => prev + 3);
+        setVisibleCount(certifications.length);
     };
 
     const hasMore = visibleCount < certifications.length;
@@ -42,7 +42,7 @@ const Certifications = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, scale: 0.95 }}
-                                transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+                                transition={{ duration: 0.5, delay: (index % 2) * 0.1 }}
                                 className={`glass p-6 sm:p-8 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(100,255,218,0.15)] hover:border-cyan/50 bg-navy/80 hover:bg-navy/90 flex flex-col group h-full w-full ${isLastAndOdd ? 'lg:col-span-2 lg:w-[calc(50%-1rem)] lg:justify-self-center' : ''
                                     }`}
                             >
