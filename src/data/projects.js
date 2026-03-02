@@ -1,18 +1,19 @@
 export const projects = [
     {
         id: 1,
-        title: "EcoScale Serverless Backend",
-        description: "A highly scalable backend architecture designed to process high-throughput environmental IoT telemetry data.",
+        title: "DockerOpsAgent",
+        description: "Conversational, LangGraph-powered assistant for Docker Hub tasks. It plans, checks risky actions, executes MCP tools, and summarizes outcomes — all from a simple CLI.",
         details: "The EcoScale Serverless Backend is a complete cloud-native solution designed for processing high-throughput IoT telemetry. By utilizing Azure Functions and Cosmos DB, the architecture ensures seamless horizontal scaling under load. It employs Event Grid for event-driven patterns, substantially reducing overall latency. Infrastructure is fully codified using Bicep/ARM templates, and sensitive settings are secured behind Azure Key Vault with Managed Identities. Future versions will incorporate more complex anomaly detection algorithms directly into the event stream.",
         images: [
             "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop"
         ],
-        architecture: ["Azure Functions", "Cosmos DB", "Event Grid", "API Management"],
+        architecture: ["Langgraph", "Docker Hub MCP", "Gemini API", "Typscript MCP SDK"],
         highlights: [
-            "Designed event-driven serverless workflow reducing latency by 40%",
-            "Implemented secure access using MSI and Azure Key Vault",
-            "Automated infrastructure deployment with Bicep/ARM templates"
+            "Plans multi-step Docker Hub workflows and executes the right tools.",
+            "Human-in-the-loop guardrails for create/update operations.",
+            "Lightweight CLI with checkpointed threads so you can pause/resume.",
+            "Structured logging for debugging (set LOG_LEVEL)"
         ],
         github: "https://github.com/yourusername/ecoscale",
         live: "https://ecoscale-demo.azurewebsites.net"
