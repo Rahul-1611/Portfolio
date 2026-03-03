@@ -57,7 +57,7 @@ export const certifications = [
         category: "applied skills",
         description: "Implementing secure and reliable network solutions for workloads using Azure Networking components.",
         keywords: ["Virtual Networks", "NSG", "Azure Firewall", "Private Link", "VNet Peering"],
-        link: "https://learn.microsoft.com/api/credentials/share/en-us/RahulDeshmukh-0132/15616A65BC2F0014?sharingId"
+        link: "https://learn.microsoft.com/api/credentials/share/en-us/rahulDeshmukh786/15616A65BC2F0014?sharingId=2DECB764418257B1"
     },
     {
         id: 7,
