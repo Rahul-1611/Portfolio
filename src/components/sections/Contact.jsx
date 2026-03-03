@@ -2,6 +2,9 @@ import React from 'react';
 import Section from '../layout/Section';
 
 const Contact = () => {
+    const user = 'rdforw';
+    const domain = 'gmail.com';
+
     return (
         <Section id="contact" title="Get In Touch" className="text-center md:text-left">
             <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
@@ -16,7 +19,7 @@ const Contact = () => {
                 </p>
 
                 <a
-                    href="mailto:your.email@example.com"
+                    href={`mailto:${user}@${domain}`}
                     className="px-8 py-4 bg-transparent border border-cyan text-cyan font-bold rounded-md hover:bg-cyan/10 transition-all duration-300 inline-block mb-16"
                 >
                     Say Hello

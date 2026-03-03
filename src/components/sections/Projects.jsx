@@ -9,9 +9,11 @@ import { Github, Info } from 'lucide-react';
 const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [showAll, setShowAll] = useState(false);
+    const [activeCategory, setActiveCategory] = useState('all');
+
+    const categories = ['all', 'cloud', 'devops', 'web', 'ai'];
 
     useEffect(() => {
-        // Automatically show all projects on mobile (below md breakpoint)
         const checkMobile = () => {
             if (window.innerWidth < 768) {
                 setShowAll(true);
@@ -23,15 +25,39 @@ const Projects = () => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
-    const visibleProjects = showAll ? projects : projects.slice(0, 3);
+    const filteredProjects = activeCategory === 'all'
+        ? projects
+        : projects.filter(project => project.categories?.includes(activeCategory));
+
+    const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
 
     return (
         <Section id="projects" title="Notable Work">
-            <p className="text-slate max-w-2xl mb-12">
+            <p className="text-slate max-w-2xl mb-8">
                 My projects emphasize high availability, security, and scalable architecture.
                 I focus on the "how" and "why" of the systems I build, leveraging modern cloud
                 components to solve complex backend problems.
             </p>
+
+            {/* Filter Tabs */}
+            <div className="flex flex-wrap gap-4 mb-12 relative z-10">
+                {categories.map((cat) => (
+                    <button
+                        key={cat}
+                        onClick={() => {
+                            setActiveCategory(cat);
+                            // Only reset showAll if not on mobile
+                            if (window.innerWidth >= 768) setShowAll(false);
+                        }}
+                        className={`px-6 py-2 rounded-full text-sm font-mono border transition-all duration-300 capitalize ${activeCategory === cat
+                            ? 'bg-cyan/10 border-cyan text-cyan shadow-[0_0_15px_rgba(100,255,218,0.1)]'
+                            : 'border-white/10 text-slate hover:border-cyan/50 hover:text-cyan'
+                            }`}
+                    >
+                        {cat}
+                    </button>
+                ))}
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
                 {visibleProjects.map((project, index) => (
@@ -42,7 +68,7 @@ const Projects = () => {
                                 <img
                                     src={project.images[0]}
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                                 />
                             ) : (
                                 <div className="w-full h-full flex items-center justify-center text-slate">
@@ -60,6 +86,15 @@ const Projects = () => {
 
                             <div className="text-sm text-slate mb-6 flex-grow">
                                 <p className="line-clamp-3">{project.description}</p>
+                            </div>
+
+                            {/* Categories tags on card */}
+                            <div className="flex flex-wrap gap-2 mb-4">
+                                {project.categories?.map(cat => (
+                                    <span key={cat} className="text-[10px] font-mono text-cyan/70 uppercase tracking-wider">
+                                        #{cat}
+                                    </span>
+                                ))}
                             </div>
 
                             {/* Buttons */}
@@ -89,13 +124,13 @@ const Projects = () => {
                 ))}
             </div>
 
-            {!showAll && projects.length > 3 && (
+            {!showAll && filteredProjects.length > 3 && (
                 <div className="mt-12 flex justify-center sticky bottom-8 md:relative md:bottom-auto z-20">
                     <button
                         onClick={() => setShowAll(true)}
                         className="px-10 py-4 bg-navy/80 backdrop-blur-sm border border-cyan text-cyan font-bold rounded-lg hover:bg-cyan/10 transition-all duration-300 shadow-[0_0_20px_rgba(100,255,218,0.1)] hover:shadow-[0_0_30px_rgba(100,255,218,0.2)] transform hover:-translate-y-1"
                     >
-                        View All Projects
+                        View More {activeCategory !== 'all' ? activeCategory : ''} Projects
                     </button>
                 </div>
             )}

@@ -33,7 +33,7 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="text-4xl md:text-6xl font-bold text-slate mb-8 max-w-3xl leading-tight"
                 >
-                    I architect secure & scalable cloud solutions.
+                    I design and build secure, scalable cloud solutions.
                 </motion.h2>
 
                 <motion.p

@@ -31,7 +31,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={onClose}
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md"
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-lg"
             >
                 <motion.div
                     initial={{ scale: 0.95, opacity: 0 }}
@@ -49,13 +49,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </button>
 
                     {/* Left: Image Slider */}
-                    <div className="w-full md:w-1/2 h-64 md:h-full relative bg-black/50 group">
+                    <div className="w-full md:w-1/2 h-64 md:h-full relative bg-black/80 group">
                         {hasImages ? (
                             <>
                                 <img
                                     src={project.images[currentImageIndex]}
                                     alt={`${project.title} screenshot`}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain p-4"
                                 />
                                 {project.images.length > 1 && (
                                     <>

@@ -3,6 +3,9 @@ import Section from '../layout/Section';
 import { Github, Linkedin, Mail, Code2 } from 'lucide-react';
 
 const About = () => {
+    const user = 'rdforw';
+    const domain = 'gmail.com';
+
     return (
         <Section id="about" title="About Me">
             <div className="max-w-3xl space-y-6 text-slate leading-relaxed text-lg mx-auto">
@@ -26,25 +29,25 @@ const About = () => {
 
                 {/* Socials / Links */}
                 <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-slate-800/50 mt-8">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate hover:text-cyan transition-colors group">
+                    <a href="https://github.com/Rahul-1611" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate hover:text-cyan transition-colors group">
                         <div className="p-3 bg-navy rounded-full border border-slate-700/50 group-hover:border-cyan/50 group-hover:bg-cyan/10 transition-all">
                             <Github size={20} />
                         </div>
                         <span className="font-mono text-sm">GitHub</span>
                     </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate hover:text-azure transition-colors group">
+                    <a href="https://www.linkedin.com/in/rahuldeshmukh-2k02/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate hover:text-azure transition-colors group">
                         <div className="p-3 bg-navy rounded-full border border-slate-700/50 group-hover:border-azure/50 group-hover:bg-azure/10 transition-all">
                             <Linkedin size={20} />
                         </div>
                         <span className="font-mono text-sm">LinkedIn</span>
                     </a>
-                    <a href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate hover:text-[#FFA116] transition-colors group">
+                    <a href="https://leetcode.com/u/Rahul-1611/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate hover:text-[#FFA116] transition-colors group">
                         <div className="p-3 bg-navy rounded-full border border-slate-700/50 group-hover:border-[#FFA116]/50 group-hover:bg-[#FFA116]/10 transition-all">
                             <Code2 size={20} />
                         </div>
                         <span className="font-mono text-sm">LeetCode</span>
                     </a>
-                    <a href="mailto:your.email@example.com" className="flex items-center gap-2 text-slate hover:text-emerald-400 transition-colors group">
+                    <a href={`mailto:${user}@${domain}`} className="flex items-center gap-2 text-slate hover:text-emerald-400 transition-colors group">
                         <div className="p-3 bg-navy rounded-full border border-slate-700/50 group-hover:border-emerald-400/50 group-hover:bg-emerald-400/10 transition-all">
                             <Mail size={20} />
                         </div>

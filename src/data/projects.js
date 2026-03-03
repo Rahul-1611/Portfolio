@@ -15,7 +15,8 @@ export const projects = [
             "Structured logging for debugging (set LOG_LEVEL)"
         ],
         github: "https://github.com/Rahul-1611/DockerOpsAgent",
-        live: "https://gmuedu-my.sharepoint.com/:v:/g/personal/rdeshmu_gmu_edu/IQDakrq8lYZhQYTcVQVJW5eyAQ3nGrbaKq5II4IupgZPyuI?e=QZgyud&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D"
+        live: "https://gmuedu-my.sharepoint.com/:v:/g/personal/rdeshmu_gmu_edu/IQDakrq8lYZhQYTcVQVJW5eyAQ3nGrbaKq5II4IupgZPyuI?e=QZgyud&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
+        categories: ["ai", "devops", "web"]
     },
     {
         id: 2,
@@ -23,8 +24,8 @@ export const projects = [
         description: "File sharing solution built to practice Azure's Node.js SDK and Azure Functions architecture",
         details: "ShareSafely is a secure, cloud-based file-sharing web application that enables users to upload files and generate time-limited sharing links. Built on Azure cloud infrastructure, this application demonstrates modern cloud engineering practices while providing a safe and efficient way to share files with automatic expiration capabilities. This project serves as a comprehensive implementation of Azure storage solutions, showcasing secure file handling, credential management, and automated cleanup processes.",
         images: [
-            "/projects/ShareSafely/ShareSafelyDemo.png",
-            "/projects/ShareSafely/ShareSafelyArch.png"
+            "/projects/ShareSafely/ShareSafelyArch.png",
+            "/projects/ShareSafely/ShareSafelyDemo.png"
         ],
         architecture: ["Blob Storage", "Azure SDK", "Azure Functions", "React", "Azure Vault"],
         highlights: [
@@ -34,10 +35,59 @@ export const projects = [
             "Functions for reducing VM costs"
         ],
         github: "https://github.com/Rahul-1611/ShareSafely",
-        live: "https://share-safely.vercel.app/"
+        live: "https://share-safely.vercel.app/",
+        categories: ["cloud", "web"]
     },
     {
         id: 3,
+        title: "Full-Stack Kubernetes Deployment with Rancher & Jenkins",
+        description: "End-to-end deployment of a full-stack Student Survey application using Rancher-managed Kubernetes, AWS infrastructure, Docker, and Jenkins CI/CD.",
+        details: "This project demonstrates a complete cloud-native deployment pipeline for a full-stack Student Survey application. Docker images for frontend and backend were built and pushed to Docker Hub, then deployed to a Kubernetes cluster managed by Rancher on AWS EC2 (Ubuntu 24.04). The backend was connected to an AWS RDS MySQL database for persistent storage. A separate Jenkins EC2 instance was configured with Docker, JDK, and kubectl to implement automated CI/CD pipelines. On every GitHub push, Jenkins builds new images, tags them with timestamps, pushes them to Docker Hub, and updates the Kubernetes deployments using kubectl set image, triggering rolling pod restarts. The system demonstrates container orchestration, infrastructure provisioning, database integration, and automated deployment in a production-like environment.",
+        images: [
+            "/projects/FullStackDeployment/Rancher.png",
+            "/projects/FullStackDeployment/LiveApp.png"
+        ],
+        architecture: [
+            "AWS EC2 (Ubuntu 24.04)",
+            "Rancher (Kubernetes Cluster Management)",
+            "Kubernetes (Custom Cluster)",
+            "Docker & Docker Hub",
+            "Jenkins CI/CD",
+            "AWS RDS (MySQL)",
+            "Node.js Backend",
+            "React Frontend"
+        ],
+        highlights: [
+            "Provisioned AWS EC2 instances for Rancher and Jenkins with custom networking and security groups",
+            "Deployed multi-container full-stack app to Kubernetes using Rancher Workloads and NodePort services",
+            "Integrated AWS RDS MySQL database with backend for persistent survey storage",
+            "Built automated Jenkins pipelines to build, tag, push Docker images, and update Kubernetes deployments",
+        ],
+        github: "https://github.com/Rahul-1611/sweha3backend",
+        live: "https://drive.google.com/drive/folders/18KatRHTqU0zd769EXcbx7avRNQXrrg3u?usp=sharing",
+        categories: ["cloud", "devops"]
+    },
+    {
+        id: 4,
+        title: "nasaMCPServer",
+        description: "A Model Context Protocol (MCP) server that interfaces with NASA's open APIs to provide space-related data to AI models.",
+        details: "This server implements the MCP standard to allow AI agents (like Claude) to directly query NASA datasets, including APOD (Astronomy Picture of the Day), Mars Rover photos, and Near Earth Object data.",
+        images: [
+            "/projects/nasaMCPServer/Tools.png",
+            "/projects/nasaMCPServer/Execution.png"
+        ],
+        architecture: ["TypeScript", "MCP SDK", "NASA Open APIs"],
+        highlights: [
+            "Implemented standard MCP tool definitions for space data retrieval",
+            "Seamless integration with Claude Desktop and other MCP clients",
+            "High-performance caching layer for NASA API responses"
+        ],
+        github: "https://github.com/Rahul-1611/nasaMcpServer",
+        live: "",
+        categories: ["ai"]
+    },
+    {
+        id: 5,
         title: "VM Fleet Commander",
         description: "Implemented an IaC approach to provision and manage VMs in Azure, using ARM templates and Bicep.",
         details: "vmFleetCommander is an Infrastructure-as-Code (IaC) project using Bicep to provision Azure infrastructure. It supports multi-VM fleet deployments with reusable modules for VNet, NSG, and VM creation, as well as scripts and parameter files for automation and testing.",
@@ -51,47 +101,8 @@ export const projects = [
             "Automated multi-environment deployments with Azure CLI for reproducibility"
         ],
         github: "https://github.com/Rahul-1611/vmFleetCommander",
-        live: ""
-    },
-    {
-        id: 4,
-        title: "Mock Interview Platform",
-        description: "A peer-to-peer technical and behavioral interview practice platform featuring real-time matching and WebRTC-based video sessions.",
-        details: "Built to simulate professional interview environments, this platform matches users based on shared preferences using the Jaccard similarity algorithm. It features a custom WebRTC implementation for low-latency video/audio communication, a collaborative code editor, and a library of questions scraped via Cheerio. Users can schedule sessions, conduct live interviews, and receive comprehensive performance reports based on peer feedback.",
-        images: [
-            "/projects/Mock-Interview-Platform/login.png",
-            "/projects/Mock-Interview-Platform/Dashboard.png",
-            "/projects/Mock-Interview-Platform/execution.png"
-        ],
-        architecture: ["WebRTC", "Node.js", "MongoDB", "EJS", "Cheerio", "REST API"],
-        highlights: [
-            "Implemented Jaccard similarity algorithm for intelligent peer matching",
-            "Integrated WebRTC for real-time video, audio, and collaborative coding",
-            "Automated question bank generation using Cheerio-based web scraping",
-            "End-to-end interview lifecycle: scheduling, live execution, and peer-driven reporting"
-        ],
-        github: "https://github.com/Rahul-1611/mockInterviewPlatform",
-        live: ""
-    },
-    {
-        id: 5,
-        title: "nsLookup Clone",
-        description: "A lightweight DNS client implementation that performs domain name to IP address translation by directly communicating with DNS servers using the DNS protocol.",
-        details: "This project implements a custom DNS client from scratch, handling the construction of DNS query messages and parsing responses. It communicates directly with DNS servers like Google's 8.8.8.8 over UDP, implementing the core DNS protocol logic without relying on high-level system libraries. It features a robust timeout-based retry mechanism and detailed Resource Record (RR) processing for accurate IP translation.",
-        images: [
-            "/projects/nsLookup-Clone/demo-nsLookupClone.png"
-        ],
-        architecture: ["C", "UDP", "DNS Protocol", "Socket Programming"],
-        highlights: [
-            "Custom DNS query message construction",
-            "UDP-based communication with DNS servers",
-            "Support for Google's public DNS (8.8.8.8)",
-            "Timeout-based retry mechanism",
-            "Detailed response parsing and display",
-            "Resource Record (RR) processing"
-        ],
-        github: "https://github.com/Rahul-1611/nslookupClone",
-        live: ""
+        live: "",
+        categories: ["cloud", "devops"]
     },
     {
         id: 6,
@@ -110,28 +121,82 @@ export const projects = [
             "Snowflake Integration: Structured memory for raw documents, extraction logs, and audit lineage"
         ],
         github: "https://github.com/Rahul-1611/AEROCARBON",
-        live: "https://aerocarbon.vercel.app/"
+        live: "https://aerocarbon.vercel.app/",
+        categories: ["ai", "web"]
     },
     {
         id: 7,
-        title: "nasaMCPServer",
-        description: "A Model Context Protocol (MCP) server that interfaces with NASA's open APIs to provide space-related data to AI models.",
-        details: "This server implements the MCP standard to allow AI agents (like Claude) to directly query NASA datasets, including APOD (Astronomy Picture of the Day), Mars Rover photos, and Near Earth Object data.",
+        title: "Mock Interview Platform",
+        description: "A peer-to-peer technical and behavioral interview practice platform featuring real-time matching and WebRTC-based video sessions.",
+        details: "Built to simulate professional interview environments, this platform matches users based on shared preferences using the Jaccard similarity algorithm. It features a custom WebRTC implementation for low-latency video/audio communication, a collaborative code editor, and a library of questions scraped via Cheerio. Users can schedule sessions, conduct live interviews, and receive comprehensive performance reports based on peer feedback.",
         images: [
-            "/projects/nasaMCPServer/Tools.png",
-            "/projects/nasaMCPServer/Execution.png"
+            "/projects/Mock-Interview-Platform/login.png",
+            "/projects/Mock-Interview-Platform/Dashboard.png",
+            "/projects/Mock-Interview-Platform/execution.png"
         ],
-        architecture: ["TypeScript", "MCP SDK", "NASA Open APIs"],
+        architecture: ["WebRTC", "Node.js", "MongoDB", "EJS", "Cheerio", "REST API"],
         highlights: [
-            "Implemented standard MCP tool definitions for space data retrieval",
-            "Seamless integration with Claude Desktop and other MCP clients",
-            "High-performance caching layer for NASA API responses"
+            "Implemented Jaccard similarity algorithm for intelligent peer matching",
+            "Integrated WebRTC for real-time video, audio, and collaborative coding",
+            "Automated question bank generation using Cheerio-based web scraping",
+            "End-to-end interview lifecycle: scheduling, live execution, and peer-driven reporting"
         ],
-        github: "https://github.com/Rahul-1611/nasaMcpServer",
-        live: ""
+        github: "https://github.com/Rahul-1611/mockInterviewPlatform",
+        live: "",
+        categories: ["web"]
     },
     {
         id: 8,
+        title: "nsLookup Clone",
+        description: "A lightweight DNS client implementation that performs domain name to IP address translation by directly communicating with DNS servers using the DNS protocol.",
+        details: "This project implements a custom DNS client from scratch, handling the construction of DNS query messages and parsing responses. It communicates directly with DNS servers like Google's 8.8.8.8 over UDP, implementing the core DNS protocol logic without relying on high-level system libraries. It features a robust timeout-based retry mechanism and detailed Resource Record (RR) processing for accurate IP translation.",
+        images: [
+            "/projects/nsLookup-Clone/demo-nsLookupClone.png"
+        ],
+        architecture: ["C", "UDP", "DNS Protocol", "Socket Programming"],
+        highlights: [
+            "Custom DNS query message construction",
+            "UDP-based communication with DNS servers",
+            "Support for Google's public DNS (8.8.8.8)",
+            "Timeout-based retry mechanism",
+            "Detailed response parsing and display",
+            "Resource Record (RR) processing"
+        ],
+        github: "https://github.com/Rahul-1611/nslookupClone",
+        live: "",
+        categories: ["web"]
+    },
+    {
+        id: 9,
+        title: "Mobile-Aware Federated Learning on Android",
+        description: "An Android-based federated learning simulation that performs resource-aware local training with adaptive scheduling and cloud logging on Azure.",
+        details: "This project implements a mobile-aware federated learning client as an Android application built with Kivy. The app monitors real-time device metrics such as battery level and CPU usage to determine training eligibility. When conditions are favorable (battery ≥ 30% and CPU ≤ 50%), a lightweight logistic regression model is trained locally on synthetic data for a controlled 3-minute duration. Training results, including accuracy, peak CPU usage, and device state, are sent to a Node.js backend deployed on Azure App Service for centralized logging and monitoring. The system demonstrates adaptive edge intelligence, privacy-preserving training behavior, and cloud-integrated reporting without requiring raw data transmission.",
+        images: [
+            "/projects/Federated-Learning-Demo/Start.jpeg",
+            "/projects/Federated-Learning-Demo/Running.jpeg",
+            "/projects/Federated-Learning-Demo/Training.jpeg",
+            "/projects/Federated-Learning-Demo/Finished.jpeg",
+            "/projects/Federated-Learning-Demo/Exception.jpeg"
+        ],
+        architecture: [
+            "Python",
+            "Kivy (Android)",
+            "Node.js + Express",
+            "Azure App Service",
+            "Logistic Regression (Custom Implementation)"
+        ],
+        highlights: [
+            "Implemented adaptive scheduling based on real-time CPU and battery thresholds",
+            "Simulated 3-minute on-device training with live progress updates and peak CPU tracking",
+            "Designed client-server architecture to mimic federated learning participation behavior",
+            "Demonstrated privacy-preserving edge training without transmitting raw data"
+        ],
+        github: "https://github.com/Rahul-1611/Mobile-fl-app",
+        live: "",
+        categories: ["ai", "cloud"]
+    },
+    {
+        id: 10,
         title: "VocalCoin",
         description: "Innovative Expense Tracker that enables hands-free financial management using natural language voice commands.",
         details: "VocalCoin is a voice-first web application designed to simplify personal finance. Built with React and the Speechly SDK, it leverages complex state management through React Hooks (useContext, useReducer) to process and categorize spoken transactions in real-time. By integrating Speechly's NLP capabilities, the platform understands intents like 'Add income for $100 in category Business for last Monday', instantly updating the global state and providing a seamless, interactive user experience without manual typing.",
@@ -146,32 +211,11 @@ export const projects = [
             "PWA Ready: Optimized for quick mobile access and offline-first interactions"
         ],
         github: "https://github.com/Rahul-1611/VocalCoin",
-        live: "https://vocalcoin.netlify.app/"
+        live: "https://vocalcoin.netlify.app/",
+        categories: ["web"]
     },
     {
-        id: 9,
-        title: "Federated Learning Demo",
-        description: "A showcase of privacy-preserving machine learning where models are trained across decentralized devices.",
-        details: "This demo illustrates the lifecycle of a federated learning job, from server-side initialization to local model updates and global aggregation, ensuring data never leaves the client devices.",
-        images: [
-            "/projects/Federated-Learning-Demo/Start.jpeg",
-            "/projects/Federated-Learning-Demo/Running.jpeg",
-            "/projects/Federated-Learning-Demo/Training.jpeg",
-            "/projects/Federated-Learning-Demo/Finished.jpeg",
-            "/projects/Federated-Learning-Demo/Exception.jpeg"
-        ],
-        architecture: ["Python", "TensorFlow Federated", "Decentralized Systems"],
-        highlights: [
-            "Demonstrated secure model aggregation without data exposure",
-            "Visualized local training progress across multiple simulated nodes",
-            "Implemented robust error handling for edge-case connectivity issues"
-        ],
-        github: "https://github.com/Rahul-1611/Mobile-fl-app",
-        live: ""
-    },
-
-    {
-        id: 10,
+        id: 11,
         title: "AdviceChromeExtension",
         description: "A simple Chrome extension built to practice API integration and browser extension development.",
         details: "One of my early projects focused on learning how to interact with third-party APIs from the frontend. It fetches and displays random pieces of advice using a public API, providing a hands-on introduction to the Chrome Extension manifest and background scripts.",
@@ -185,24 +229,7 @@ export const projects = [
             "Learned the fundamentals of Chrome Extension architecture and manifest files"
         ],
         github: "https://github.com/Rahul-1611/AdviceChromeExtension",
-        live: ""
-    },
-    {
-        id: 11,
-        title: "FullStackDeployment via Rancher",
-        description: "Distributed infrastructure training system used for large-scale Kubernetes deployments.",
-        details: "This project showcases container orchestration at scale. It includes automated pipelines for deploying full-stack applications across heterogeneous environments using Rancher and Kubernetes.",
-        images: [
-            "/projects/FullStackDeployment/Rancher.png",
-            "/projects/FullStackDeployment/LiveApp.png"
-        ],
-        architecture: ["Rancher", "Kubernetes", "Docker", "CI/CD", "Jenkins"],
-        highlights: [
-            "Configured multi-cluster management through Rancher",
-            "Automated blue-green deployment strategies for zero downtime",
-            "Implemented comprehensive cluster visibility and logging"
-        ],
-        github: "https://github.com/Rahul-1611/sweha3backend",
-        live: "https://drive.google.com/drive/folders/18KatRHTqU0zd769EXcbx7avRNQXrrg3u?usp=sharing"
+        live: "",
+        categories: ["web"]
     }
 ];
