@@ -1,16 +1,34 @@
-# React + Vite
+# Rahul Deshmukh | Cloud & Software Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built to showcase my expertise in cloud architecture, backend engineering, and AI systems.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
+- **Frontend:** React, Vite, Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Deployment:** Github Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
+- **Dynamic Project Showcase:** Filterable projects by category (Cloud, AI, DevOps, Web).
+- **Responsive Design:** Optimized for all screen sizes from mobile to desktop.
+- **Glassmorphism UI:** Modern, high-performance aesthetic with subtle animations.
+- **Project Modals:** Detailed views for each project with image galleries and architecture highlights.
+- **Contact Obfuscation:** Built-in email protection against automated scrapers.
 
-## React Compiler
+## 🛠️ Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/Rahul-1611/Portfolio.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run locally:**
+   ```bash
+   npm run dev
+   ```
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📄 License
+MIT
