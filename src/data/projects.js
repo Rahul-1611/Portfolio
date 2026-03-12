@@ -126,6 +126,27 @@ export const projects = [
     },
     {
         id: 7,
+        title: "Power User Prediction",
+
+        description: "A machine learning pipeline for identifying long-term power users based on early behavioral signals and debugging patterns in a data analytics platform.",
+        details: "Built as an exploration of Zerve's serverless data platform, this project analyzes user retention using ratio-based feature engineering and early-event prediction. The system caps user events to the first 50 actions to simulate real-world early-stage identification, extracting behavioral signals like rapid retry rates, action gaps, and debug intensity. Dual ML models (RandomForest and GradientBoosting) achieve 94% AUC through vectorized pandas operations and stratified cross-validation, with a REST API endpoint for real-time power user predictions and comprehensive performance analytics including peer-driven behavior analysis.",
+        images: [
+            "/projects/PowerUserIdentification/debugIntensity.png",
+            "/projects/PowerUserIdentification/sourceVsProbability.png"
+        ],
+        architecture: ["Python", "Pandas", "Scikit-learn", "RandomForest", "GradientBoosting", "REST API", "Zerve Serverless"],
+        highlights: [
+            "Engineered ratio-based features (rapid_retry_rate, debug_intensity, avg_action_gap) to prevent data leakage",
+            "Implemented first-50-events capping to simulate early-stage power user prediction",
+            "Achieved 94% AUC across dual ML models with stratified 5-fold cross-validation",
+            "Built end-to-end pipeline: data ingestion → cleaning → feature extraction → model training → visualization → API deployment"
+        ],
+        github: "https://github.com/Rahul-1611/zerveAiHack26",
+        live: "https://drive.google.com/file/d/1ljEf3XFI7s5gGoFxRZcO6YRJx-EORYCM/view?usp=sharing",
+        categories: ["ai"]
+    },
+    {
+        id: 8,
         title: "Mock Interview Platform",
         description: "A peer-to-peer technical and behavioral interview practice platform featuring real-time matching and WebRTC-based video sessions.",
         details: "Built to simulate professional interview environments, this platform matches users based on shared preferences using the Jaccard similarity algorithm. It features a custom WebRTC implementation for low-latency video/audio communication, a collaborative code editor, and a library of questions scraped via Cheerio. Users can schedule sessions, conduct live interviews, and receive comprehensive performance reports based on peer feedback.",
@@ -146,7 +167,7 @@ export const projects = [
         categories: ["web"]
     },
     {
-        id: 8,
+        id: 9,
         title: "nsLookup Clone",
         description: "A lightweight DNS client implementation that performs domain name to IP address translation by directly communicating with DNS servers using the DNS protocol.",
         details: "This project implements a custom DNS client from scratch, handling the construction of DNS query messages and parsing responses. It communicates directly with DNS servers like Google's 8.8.8.8 over UDP, implementing the core DNS protocol logic without relying on high-level system libraries. It features a robust timeout-based retry mechanism and detailed Resource Record (RR) processing for accurate IP translation.",
@@ -167,7 +188,7 @@ export const projects = [
         categories: ["web"]
     },
     {
-        id: 9,
+        id: 10,
         title: "Mobile-Aware Federated Learning on Android",
         description: "An Android-based federated learning simulation that performs resource-aware local training with adaptive scheduling and cloud logging on Azure.",
         details: "This project implements a mobile-aware federated learning client as an Android application built with Kivy. The app monitors real-time device metrics such as battery level and CPU usage to determine training eligibility. When conditions are favorable (battery ≥ 30% and CPU ≤ 50%), a lightweight logistic regression model is trained locally on synthetic data for a controlled 3-minute duration. Training results, including accuracy, peak CPU usage, and device state, are sent to a Node.js backend deployed on Azure App Service for centralized logging and monitoring. The system demonstrates adaptive edge intelligence, privacy-preserving training behavior, and cloud-integrated reporting without requiring raw data transmission.",
@@ -196,7 +217,7 @@ export const projects = [
         categories: ["ai", "cloud"]
     },
     {
-        id: 10,
+        id: 11,
         title: "VocalCoin",
         description: "Innovative Expense Tracker that enables hands-free financial management using natural language voice commands.",
         details: "VocalCoin is a voice-first web application designed to simplify personal finance. Built with React and the Speechly SDK, it leverages complex state management through React Hooks (useContext, useReducer) to process and categorize spoken transactions in real-time. By integrating Speechly's NLP capabilities, the platform understands intents like 'Add income for $100 in category Business for last Monday', instantly updating the global state and providing a seamless, interactive user experience without manual typing.",
@@ -215,7 +236,7 @@ export const projects = [
         categories: ["web"]
     },
     {
-        id: 11,
+        id: 12,
         title: "AdviceChromeExtension",
         description: "A simple Chrome extension built to practice API integration and browser extension development.",
         details: "One of my early projects focused on learning how to interact with third-party APIs from the frontend. It fetches and displays random pieces of advice using a public API, providing a hands-on introduction to the Chrome Extension manifest and background scripts.",
