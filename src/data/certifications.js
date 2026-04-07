@@ -31,6 +31,16 @@ export const certifications = [
     },
     {
         id: 4,
+        name: "KodeKloud Engineer - Kubernetes (Level 1)",
+        issuer: "KodeKloud",
+        date: "Apr 2026",
+        category: "devops",
+        description: "Hands-on implementation of Kubernetes orchestration, cluster management, and containerized workload deployment in real-world labs.",
+        keywords: ["Kubernetes", "Container Orchestration", "Cluster Management", "Pods", "Services", "Deployments"],
+        link: "https://engineer.kodekloud.com/certificate-verification/d634eb42-bff0-4937-9a2c-9d82bc565c32"
+    },
+    {
+        id: 5,
         name: "Azure AI Fundamentals",
         issuer: "Microsoft",
         date: "Dec 2024",
@@ -40,7 +50,7 @@ export const certifications = [
         link: "https://learn.microsoft.com/en-us/users/rahuldeshmukh786/credentials/f76fc0120dc521a3"
     },
     {
-        id: 5,
+        id: 6,
         name: "AWS Cloud Quest: Cloud Practitioner",
         issuer: "AWS",
         date: "June 2023",
@@ -50,7 +60,7 @@ export const certifications = [
         link: "https://www.credly.com/badges/50d0060b-673f-475c-ada7-ddbeadfd1980/linked_in_profile"
     },
     {
-        id: 6,
+        id: 7,
         name: "Configure secure access to your workloads using Azure networking",
         issuer: "Microsoft",
         date: "Nov 2024",
@@ -60,7 +70,7 @@ export const certifications = [
         link: "https://learn.microsoft.com/api/credentials/share/en-us/rahulDeshmukh786/15616A65BC2F0014?sharingId=2DECB764418257B1"
     },
     {
-        id: 7,
+        id: 8,
         name: "Secure storage for Azure Files and Azure Blob Storage",
         issuer: "Microsoft",
         date: "Jun 2024",
@@ -70,7 +80,7 @@ export const certifications = [
         link: "https://learn.microsoft.com/api/credentials/share/en-us/rahulDeshmukh786/9665EBC8941778E3?sharingId"
     },
     {
-        id: 8,
+        id: 9,
         name: "Learning Bash Scripting",
         issuer: "LinkedIn",
         date: "Jan 2025",
@@ -80,7 +90,7 @@ export const certifications = [
         link: "https://www.linkedin.com/learning/certificates/029729425898f08a6a46693f001627c4b653606c19886fa5a3dff684b3d8619f"
     },
     {
-        id: 9,
+        id: 10,
         name: "KodeKloud Engineer - Docker (Level 1)",
         issuer: "KodeKloud",
         date: "Feb 2026",
